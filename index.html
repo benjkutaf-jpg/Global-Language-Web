@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Language Academy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!--================-NAVIGATION BAR-==========================-->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">Global<span>Language</span></a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="menu-btn" id="menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!--================-MAIN SECTION-==========================-->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Learn International Languages <br><span>With Confidence</span></h1>
+                <p>Empowering students, professionals, and travelers to connect with the world through expert-led language courses.</p>
+                <a href="#courses" class="btn">Enroll Now</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <h2>About Global Language Academy</h2>
+                    <p>Founded with a mission to bridge cultural gaps, we provide world-class linguistic training. Whether you are a beginner or a professional, our immersive methods ensure you speak like a native.</p>
+                    <div class="stats">
+                        <div><strong>10+</strong><p>Years Exp</p></div>
+                        <div><strong>50+</strong><p>Native Teachers</p></div>
+                        <div><strong>5k+</strong><p>Students</p></div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=600" alt="Students learning">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--================-COURSES ONCLICK SECTION-==========================-->
+    <section id="courses" class="courses">
+    <div class="container">
+        <h2 class="section-title">Our Courses</h2>
+        <div class="course-grid">
+            <div class="course-card" onclick="openModal('English', 'Master business and conversational English. Our curriculum covers IELTS preparation, grammar mastery, and professional writing for the global workplace.')">
+                <img src="https://flagcdn.com/w80/gb.png" alt="English">
+                <h3>English</h3>
+                <p>Click to view details</p>
+            </div>
+
+            <div class="course-card" onclick="openModal('French', 'Dive into the language of culture and diplomacy. Focus on phonetics, elegant vocabulary, and preparation for DELF/DALF certifications.')">
+                <img src="https://flagcdn.com/w80/fr.png" alt="French">
+                <h3>French</h3>
+                <p>Click to view details</p>
+            </div>
+
+            <div class="course-card" onclick="openModal('Spanish', 'Learn the world\'s second most spoken language. We focus on conversational fluency, Latin American vs. Peninsular dialects, and vibrant cultural immersion.')">
+                <img src="https://flagcdn.com/w80/es.png" alt="Spanish">
+                <h3>Spanish</h3>
+                <p>Click to view details</p>
+            </div>
+
+            <div class="course-card" onclick="openModal('German', 'The language of science and engineering. This course focuses on logical grammar structures, technical vocabulary, and everyday conversation in Germany.')">
+                <img src="https://flagcdn.com/w80/de.png" alt="German">
+                <h3>German</h3>
+                <p>Click to view details</p>
+            </div>
+
+            <div class="course-card" onclick="openModal('Arabic', 'Master Modern Standard Arabic (MSA). Learn the beautiful script, complex grammar, and essential conversational skills for the Middle East.')">
+                <img src="https://flagcdn.com/w80/sa.png" alt="Arabic">
+                <h3>Arabic</h3>
+                <p>Click to view details</p>
+            </div>
+
+            <div class="course-card" onclick="openModal('Chinese', 'Unlock the future with Mandarin. We simplify character writing and focus heavily on the four tones and Pinyin for rapid speaking progress.')">
+                <img src="https://flagcdn.com/w80/cn.png" alt="Chinese">
+                <h3>Chinese</h3>
+                <p>Click to view details</p>
+            </div>
+
+            <div id="courseModal" class="modal">
+                <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2 id="modalTitle">Course Name</h2>
+        
+                <!----Course Table-->
+        <div class="course-details">
+            <p id="modalDescription">Course details go here...</p>
+            
+            <table class="course-table">
+                <thead>
+                    <tr>
+                        <th>Duration</th>
+                        <th>Level</th>
+                        <th>Fee</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td id="modalDuration">12 Weeks</td>
+                        <td>Beginner </td>
+                        <td id="modalPrice">$200</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <a href="#contact" class="btn modal-btn" onclick="closeModal()">Secure My Spot</a>
+    </div>
+</div>
+
+            
+
+        </div>
+    </div>
+</section>
+
+<div id="courseModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2 id="modalTitle">Course Name</h2>
+        <hr>
+        <p id="modalDescription">Course details go here...</p>
+        <a href="#contact" class="btn" onclick="closeModal()">Inquire for Admission</a>
+    </div>
+</div>
+
+    <!--================-CONTACT SECTION-==========================-->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-wrapper">
+                <form id="contact-form">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Message" rows="5"></textarea>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+                <div class="contact-info">
+                    <p><i class="fas fa-phone"></i> +233 (0)559654251</p>
+                    <p><i class="fas fa-envelope"></i> info@glacademy.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Education St, Global City</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--================-FOOTER-==========================-->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Global Language Academy. All Rights Reserved.</p>
+            <div class="socials">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <!---CHART-->
+    <div class="chat-wrapper">
+    <div class="chat-popup" id="chatPopup">
+        <div class="chat-header">
+            <div class="chat-admin">
+                <img src="https://i.pravatar.cc/100?u=admin" alt="Support">
+                <div>
+                    <h4>Global Academy Support</h4>
+                    <span><i class="fas fa-circle"></i> Online</span>
+                </div>
+            </div>
+            <button onclick="toggleChat()">&times;</button>
+        </div>
+        <div class="chat-body" id="chatBody">
+            <p class="bot-msg">Hello! 👋 How can I help you with our language courses today?</p>
+        </div>
+        <div class="chat-footer">
+            <input type="text" id="chatInput" placeholder="Type a message...">
+            <button onclick="sendMessage()"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+    
+    <button class="chat-trigger" onclick="toggleChat()">
+        <i class="fas fa-comment-dots"></i>
+    </button>
+</div>
+</body>
+</html>
